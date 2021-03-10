@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          var input1 = document.querySelector("#input1");
+          var input2 = document.querySelector("#input2");
+          var output = document.querySelector("#output");
+          var button = document.querySelector("#clear");
+            button.addEventListener("click", function (event) {
+
+          });
+          var button = document.querySelector("#multiply");
+          button.addEventListener("click", function (event) {
+            output.value = parseInt(input1.value) * parseInt(input2.value);
+
+          });
+          var button = document.querySelector("#divide");
+          button.addEventListener("click", function (event) {
+              output.value = parseInt(input1.value) / parseInt(input2.value);
+
+            });
+          var button = document.querySelector("#add");
+          button.addEventListener("click", function(event) {
+              output.value = parseInt(input1.value) + parseInt(input2.value);
+
+          })
+          var button = document.querySelector("#subtract");
+          button.addEventListener("click", function(event) {
+              output.value = parseInt(input1.value) - parseInt(input2.value)
+          })
+          var button = document.querySelector("#clear");
+          button.addEventListener("click", function (event) {
+              output.value = "";
+              input1.value = "";
+              input2.value = "";
+
+
+          })
+        })
+    </script>
+</head>
+<body>
+<h1>Calculator</h1>
+<input type="number" id="input1">
+<input type="number" id="input2">
+
+<form>
+     <button type="button" id="multiply">Multiply</button>
+     <button type="button" id="divide">Divide</button>
+     <button type="button" id="add">Add</button>
+     <button type="button" id="subtract">Subtract</button>
+    <button type="button" id="clear">Clear</button>
+
+</form>
+<output id="output"></output>
+</body>
+</html>

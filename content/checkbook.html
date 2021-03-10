@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var checkbookBody = document.querySelector("#bod");
+            checkbookBody.addEventListener("click",function(event) {
+//use event.target here
+                if (event.target.matches("button")) {
+                    checkbookBody.insertAdjacentHTML('beforeend',newRow);
+
+                }
+            });
+
+            var newRow =  `
+<tr>
+  <td>
+       <input class="date" type="date">
+   </td>
+   <td>
+       <input type="number" step="1" min="501">
+   </td>
+   <td>
+       <input class="item" type="text">
+   </td>
+
+   <td>
+       <input type="list" class="budgetType" list="budgetItems">
+   </td>
+   <td>
+       <span class="dollar_sign">$</span><input type="number" class="cost">
+       <button type="button" class="Save">Save</button>
+   </td>
+</tr>`;
+
+
+
+
+        })
+    </script>
+</head>
+<body>
+<h1>Checkbook and Budget Calculator</h1>
+<datalist id="budgetItems">
+    <option value="Housing">
+    <option value="Food">
+    <option value="Clothing">
+    <option value="Utilities">
+    <option value="Transportation">
+    <option value="Entertainment">
+    <option value="Miscellaneous">
+
+</datalist>
+<table border="1px">
+    <thead>
+    <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Check#</th>
+        <th scope="col">Item</th>
+        <th scope="col">Budget Type</th>
+        <th scope="col">Cost</th>
+    </tr>
+    </thead>
+
+    <tbody id="bod">
+    <tr>
+        <td><input type="date" min="1900-01-01" max="2019-12-31"> </td>
+        <td><input type="number" min="501"></td>
+        <td><input type="text" class="item"> </td>
+        <td><input type="list" list="budgetItems" class="budget_type">
+        </td>
+        <td><span>$</span><input type="number"><button type="button">Save</button></td>
+    </tr>
+    </tbody>
+
+    <tfoot>
+    <tr>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+        <td colspan=""><label>Subtotal</label><span> $</span><input type="number"></td>
+    </tr>
+    </tfoot>
+</table>
+</body>
+</html>
