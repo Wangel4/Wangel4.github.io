@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 iframe{
     width: 100%;
     height: 300%;
@@ -47,17 +47,22 @@ body{
 .graybg {
     background-color: #f7f7f7;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
+.calcbg {
+   background-color: #224662;
 }
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
