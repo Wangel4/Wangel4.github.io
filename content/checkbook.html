@@ -7,10 +7,35 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var checkbookBody = document.querySelector("#bod");
+            let tableInfo = [];
             checkbookBody.addEventListener("click",function(event) {
 //use event.target here
+
+                let tablerow = event.target.parentNode.parentNode;
                 if (event.target.matches("button")) {
                     checkbookBody.insertAdjacentHTML('beforeend',newRow);
+
+                    let date = tablerow.querySelector(".date").value;
+                    let check = tablerow.querySelector(".check_number").value;
+                    let item = tablerow.querySelector(".item").value;
+                    let budget = tablerow.querySelector(".budget_type").value;
+                    let cost = tablerow.querySelector(".cost").value;
+                    let rowInfo = [];
+                    rowInfo.push(date);
+                    rowInfo.push(check);
+                    rowInfo.push(item);
+                    rowInfo.push(budget);
+                    rowInfo.push(cost);
+                    tableInfo.push(rowInfo);
+                    console.log(rowInfo);
+                    console.log(tableInfo);
+
+                    let subtotal = 0.0;
+                    tableInfo.forEach(function (rowInfo) {
+                        subtotal += parseFloat(rowInfo[4]);
+                    });
+                    let subtotal_display = document.querySelector(".subtotal");
+                    subtotal_display.value = subtotal.toFixed(2);
 
                 }
             });
@@ -21,14 +46,14 @@
        <input class="date" type="date">
    </td>
    <td>
-       <input type="number" step="1" min="501">
+       <input class="check_number" type="number" step="1" min="501">
    </td>
    <td>
        <input class="item" type="text">
    </td>
 
    <td>
-       <input type="list" class="budgetType" list="budgetItems">
+       <input type="list" class="budget_type" list="budgetItems">
    </td>
    <td>
        <span class="dollar_sign">$</span><input type="number" class="cost">
@@ -67,12 +92,12 @@
 
     <tbody id="bod">
     <tr>
-        <td><input type="date" min="1900-01-01" max="2019-12-31"></td>
-        <td><input type="number" min="501"></td>
-        <td><input type="text" class="item"> </td>
-        <td><input type="list" list="budgetItems" class="budget_type">
+        <td><input class="date" type="date" min="1900-01-01" max="2019-12-31"></td>
+        <td><input class="check_number" type="number" min="501"></td>
+        <td><input class="item" type="text"> </td>
+        <td><input class="budget_type" type="list" list="budgetItems" >
         </td>
-        <td><span>$</span><input type="number"><button type="button">Save</button></td>
+        <td><span>$</span><input class="cost" type="number"><button type="button">Save</button></td>
     </tr>
     </tbody>
 
@@ -82,7 +107,7 @@
         <td></td>
         <td></td>
         <td></td>
-        <td colspan=""><label>Subtotal</label><span> $</span><input type="number"></td>
+        <td colspan=""><label>Subtotal</label><span> $</span><input type="number" class="subtotal"></td>
     </tr>
     </tfoot>
 </table>
