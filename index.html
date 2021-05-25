@@ -5,6 +5,9 @@
     <title>Willie Portfolio</title>
     <link rel="stylesheet" href="css/contentstyles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <header id="homehead">
@@ -56,14 +59,41 @@
                 <div class="col-md-5 border">
                     <h2 class="text-center mt-3">Certifications</h2>
                     <hr>
-                    <div class="row mb-5">
-                        <img class="col-md-6 mb-2" src="Pictures/Excelcert.jpg">
+
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Pictures/Excelcert.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Pictures/htmlcert.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Pictures/powerpointcert.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Pictures/Wordcert.jpg" class="d-block w-100" alt="">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Pictures/oshacert.jpg" class="d-block w-100" alt="">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <!--<img class="col-md-6 mb-2" src="Pictures/Excelcert.jpg">
                         <img class="col-md-6 mb-2" src="Pictures/htmlcert.jpg">
                         <img class="col-md-6 mb-2" src="Pictures/powerpointcert.jpg">
                         <img class="col-md-6 mb-2" src="Pictures/Wordcert.jpg">
                         <img class="col-md-6 mb-2" src="Pictures/oshacert.jpg">
+-->
 
-                    </div>
 
                 </div>
 
