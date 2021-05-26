@@ -20,6 +20,9 @@
         td{
             padding: 4px;
         }
+        .subtotalCell{
+            background-color:#DEE2E6;
+        }
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -109,7 +112,7 @@
 
     <tbody id="bod">
     <tr>
-        <td><input class="date" type="date" min="1900-01-01" max="2019-12-31"></td>
+        <td><input class="date" type="date"></td>
         <td><input class="check_number" type="number" min="501"></td>
         <td><input class="item" type="text"> </td>
         <td><input class="budget_type" type="list" list="budgetItems" >
@@ -120,11 +123,11 @@
 
     <tfoot>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td colspan=""><label>Subtotal</label><span> $</span><input type="number" class="subtotal"></td>
+        <!--<td colspan=""></td>
+        <td colspan=""></td>
+        <td colspan=""></td>-->
+        <td colspan="4"></td>
+        <td class="subtotalCell"><label>Subtotal</label><span> $</span><input type="number" class="subtotal"></td>
     </tr>
     </tfoot>
 </table>
